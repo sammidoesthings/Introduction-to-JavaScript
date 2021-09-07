@@ -156,7 +156,7 @@ function hungryDog(age, weight) {
 }
 
 console.log(hungryDog(1, 15))
-
+/*why isn't the pass/fail updating to show hungry dog is complete?*/
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
