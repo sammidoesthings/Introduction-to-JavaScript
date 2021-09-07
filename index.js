@@ -21,6 +21,20 @@ Do the following:
 */
 
 
+function votingAge(age){
+  if (age > 18){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(votingAge(23))
+console.log(votingAge(30))
+console.log(votingAge(15))
+console.log(votingAge(98))
+
+
 
 /*
 Task 1b - Values
@@ -33,9 +47,11 @@ Do the following:
    HINT: no function required
 */
 
+let joeSoup = "pumpkin"
+let sallySoup = "tomato"
 
-
-
+joeSoup = sallySoup;
+console.log(joeSoup)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -48,7 +64,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let yearString = "1999"
 
+console.log(Number(yearString))
 
 
 /*
@@ -110,9 +128,34 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(age, weight) {
+  if (age >= 1 && weight <= 5) {
+    // console.log('Dog food:')
+    return weight * 0.05;
+  } else if (age >= 1 && weight > 6 && weight < 10) {
+    // console.log('Dog food:')
+    return weight * 0.04; 
+  } else if (age >= 1 && weight > 11 && weight < 15) {
+    // console.log('Dog food:')
+    return weight * 0.03;
+  } else if (age >= 1 && weight > 15) {
+    // console.log('Dog food:')
+    return weight * 0.02;
+  } else if (age < 1 && age > 0.57) {
+    // console.log('Puppy food:')
+    return weight * 0.1;
+  } else if (age < 0.57 && age > 0.33) {
+    // console.log('Puppy food:')
+    return weight * 0.05; 
+  } else if (age < 0.33 && age > 0.16) {
+    // console.log('Puppy food:')
+    return weight * 0.04;
+  } else {
+    return 'Please enter proper arguments';
+  }
 }
+
+console.log(hungryDog(1, 15))
 
 
 
