@@ -142,15 +142,15 @@ function hungryDog(weight, age) {
   } else if (age >= 1 && weight > 15) {
     console.log('Dog food:')
     return weight * 0.02;
-  } else if (age < 1 && age > 0.57) {
-    console.log('Puppy food:')
-    return weight * 0.1;
-  } else if (age < 0.57 && age > 0.33) {
-    console.log('Puppy food:')
-    return weight * 0.05; 
-  } else if (age < 0.33 && age > 0.16) {
+  } else if (age < 1 && age >= 0.58) {
     console.log('Puppy food:')
     return weight * 0.04;
+  } else if (age <= 0.57 && age > 0.33) {
+    console.log('Puppy food:')
+    return weight * 0.05; 
+  } else if (age <= 0.33 && age > 0.16) {
+    console.log('Puppy food:')
+    return weight * 0.1;
   } else {
     return 'Please enter proper arguments';
   }
@@ -184,30 +184,35 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 //create if statement to determine computer RPS
 //split number into thirds, and assign the global variable correct string
 
+let computer = Math.random();
+// let computer;
 
-//DIDNT FIGURE THIS ONE OUT YET
-//DIDNT FIGURE THIS ONE OUT YET
-//DIDNT FIGURE THIS ONE OUT YET
-
-let computerRandom = Math.random()
-let computerResponse;
-
-if (computerRandom <= 0.33) {
-  computerResponse = 'paper'
-} else if (computerRandom <= 0.66) {
-  computerResponse = 'rock'
-} else if (computerRandom > 0.66) {
-  computerResponse = 'scissors'
+function game(user, computer) {
+  if (computer >= 0 && computer < 0.33) {
+    computer = "rock";
+  } else if (computer >= 0.33 && computer < 0.66) {
+    computer = "paper";
+  } else if (computer >= 0.66) {
+    computer = "scissors";
+  }
+  if (user === computer) {
+    return "it's a tie";
+  } else if (user === "paper" && computer === "rock") {
+    return "you win!";
+  } else if (user === "rock" && computer === "scissors") {
+    return "you win!";
+  } else if (user === "scissors" && computer === "paper") {
+    return "you win!";
+  } else if (user === "rock" && computer === "paper") {
+    return "you lose!";
+  } else if (user === "scissors" && computer === "rock") {
+    return "you lose!";
+  } else if (user === "paper" && computer === "scissors") {
+    return "you lose!";
+  }
 }
 
-function game(user, computer){
-
-}
-
-console.log(game('paper', computerResponse))
-//DIDNT FIGURE THIS ONE OUT YET
-//DIDNT FIGURE THIS ONE OUT YET
-//DIDNT FIGURE THIS ONE OUT YET
+console.log(game('paper', computer))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -217,7 +222,7 @@ console.log(game('paper', computerResponse))
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
@@ -251,13 +256,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-let number = {number}
-let {numberLeft} = (number - 1);
+// let number = {number}
+// let {numberLeft} = (number - 1);
 
 function annoyingSong(number){
-  for (number = 99; number > 0; number--;) {
-        return '{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {numberLeft} bottles of soda on the wall';
-  }
+//   for (number = 99; number > 0; number--) {
+//         return '{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {numberLeft} bottles of soda on the wall';
+//   }
 }
 
 
@@ -272,7 +277,7 @@ function annoyingSong(number){
 //   }
 // }
 
-console.log(annoyingSong(100))
+// console.log(annoyingSong(100))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -291,7 +296,7 @@ Using the grade function below do the following:
 */
 
 function grade(percentage){
-  if (percentage > 90) {
+  if (percentage >= 90) {
     return 'you got an A';
   } else if (percentage <= 89 && percentage >= 80) {
     return 'you got a B';
