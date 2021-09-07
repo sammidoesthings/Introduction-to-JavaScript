@@ -255,10 +255,22 @@ let number = {number}
 let {numberLeft} = (number - 1);
 
 function annoyingSong(number){
-  for (number = 99; number > 0; number--) {
+  for (number = 99; number > 0; number--;) {
         return '{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {numberLeft} bottles of soda on the wall';
   }
 }
+
+
+//I HAVE NO CLUE BUT HERE'S THE WORKING COINFLIP LOOP YOU WROTE BEFORE TO HELP
+
+// for (let i = 0; i < 10; i++){
+//   var coinFlip = Math.round(Math.random());
+//   if (coinFlip === 1) {
+//     console.log("heads");
+//   } else if (coinFlip === 0) {
+//     console.log("tails");
+//   }
+// }
 
 console.log(annoyingSong(100))
 
@@ -303,7 +315,7 @@ Using the vowelCounter function below do the following:
 1. Receive a string as a parameter
 2. Count and return the number of vowels within that string.  It should handle both capitalized and uncapitalized vowels.
 
-HINT - you may need to study tomorrow's content on arrays 
+HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
