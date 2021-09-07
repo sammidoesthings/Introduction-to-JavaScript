@@ -22,7 +22,7 @@ Do the following:
 
 
 function votingAge(age){
-  if (age > 18){
+  if (age >= 18){
     return true;
   } else {
     return false;
@@ -63,10 +63,10 @@ Do the following:
 
    HINT: look up the Number method
 */
-
 let yearString = "1999"
+let yearNum = Number(yearString)
 
-console.log(Number(yearString))
+console.log(yearNum)
 
 
 /*
@@ -130,25 +130,25 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 
 function hungryDog(age, weight) {
   if (age >= 1 && weight <= 5) {
-    // console.log('Dog food:')
+    console.log('Dog food:')
     return weight * 0.05;
   } else if (age >= 1 && weight > 6 && weight < 10) {
-    // console.log('Dog food:')
+    console.log('Dog food:')
     return weight * 0.04; 
   } else if (age >= 1 && weight > 11 && weight < 15) {
-    // console.log('Dog food:')
+    console.log('Dog food:')
     return weight * 0.03;
   } else if (age >= 1 && weight > 15) {
-    // console.log('Dog food:')
+    console.log('Dog food:')
     return weight * 0.02;
   } else if (age < 1 && age > 0.57) {
-    // console.log('Puppy food:')
+    console.log('Puppy food:')
     return weight * 0.1;
   } else if (age < 0.57 && age > 0.33) {
-    // console.log('Puppy food:')
+    console.log('Puppy food:')
     return weight * 0.05; 
   } else if (age < 0.33 && age > 0.16) {
-    // console.log('Puppy food:')
+    console.log('Puppy food:')
     return weight * 0.04;
   } else {
     return 'Please enter proper arguments';
