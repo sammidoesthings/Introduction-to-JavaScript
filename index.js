@@ -63,6 +63,7 @@ Do the following:
 
    HINT: look up the Number method
 */
+
 let yearString = "1999"
 let yearNum = Number(yearString)
 
@@ -128,7 +129,7 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(age, weight) {
+function hungryDog(weight, age) {
   if (age >= 1 && weight <= 5) {
     console.log('Dog food:')
     return weight * 0.05;
@@ -156,7 +157,6 @@ function hungryDog(age, weight) {
 }
 
 console.log(hungryDog(1, 15))
-/*why isn't the pass/fail updating to show hungry dog is complete?*/
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -180,10 +180,34 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+//use Math.random() to generate a number between 0-1
+//create if statement to determine computer RPS
+//split number into thirds, and assign the global variable correct string
+
+
+//DIDNT FIGURE THIS ONE OUT YET
+//DIDNT FIGURE THIS ONE OUT YET
+//DIDNT FIGURE THIS ONE OUT YET
+
+let computerRandom = Math.random()
+let computerResponse;
+
+if (computerRandom <= 0.33) {
+  computerResponse = 'paper'
+} else if (computerRandom <= 0.66) {
+  computerResponse = 'rock'
+} else if (computerRandom > 0.66) {
+  computerResponse = 'scissors'
 }
 
+function game(user, computer){
+
+}
+
+console.log(game('paper', computerResponse))
+//DIDNT FIGURE THIS ONE OUT YET
+//DIDNT FIGURE THIS ONE OUT YET
+//DIDNT FIGURE THIS ONE OUT YET
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -197,11 +221,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
-
-
+console.log(miles(3))
 
 //Task 5b - Feet to CM
 /*
@@ -211,9 +234,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
+console.log(feet(36))
 
 
 
@@ -227,9 +251,16 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+let number = {number}
+let {numberLeft} = (number - 1);
+
+function annoyingSong(number){
+  for (number = 99; number > 0; number--) {
+        return '{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {numberLeft} bottles of soda on the wall';
+  }
 }
+
+console.log(annoyingSong(100))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -247,10 +278,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(percentage){
+  if (percentage > 90) {
+    return 'you got an A';
+  } else if (percentage <= 89 && percentage >= 80) {
+    return 'you got a B';
+  } else if (percentage <= 79 && percentage >= 70) {
+    return 'you got a C';
+  } else if (percentage <= 69 && percentage >= 60) {
+    return 'you got a D';
+  } else if (percentage < 60) {
+    return 'you got an F';
+  }
 }
 
+console.log(grade(20))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
