@@ -185,7 +185,6 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 //split number into thirds, and assign the global variable correct string
 
 let computer = Math.random();
-// let computer;
 
 function game(user, computer) {
   if (computer >= 0 && computer < 0.33) {
@@ -256,28 +255,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-// let number = {number}
-// let {numberLeft} = (number - 1);
-
-function annoyingSong(number){
-//   for (number = 99; number > 0; number--) {
-//         return '{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {numberLeft} bottles of soda on the wall';
-//   }
+function annoyingSong(number) {
+  for (let i = number; i > 0; i--) {
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`
+  }
 }
 
-
-//I HAVE NO CLUE BUT HERE'S THE WORKING COINFLIP LOOP YOU WROTE BEFORE TO HELP
-
-// for (let i = 0; i < 10; i++){
-//   var coinFlip = Math.round(Math.random());
-//   if (coinFlip === 1) {
-//     console.log("heads");
-//   } else if (coinFlip === 0) {
-//     console.log("tails");
-//   }
-// }
-
-// console.log(annoyingSong(100))
+annoyingSong(10)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
